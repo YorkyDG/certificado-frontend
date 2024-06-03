@@ -1,34 +1,31 @@
-import './App.css'
-function App() {
-
+import "./App.css";
+import { Navbar } from "./components/Navbar";
+import { useLogin } from "./hooks/useLogin";
+const App = () => {
   return (
     <>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-              <a class="nav-link" href="#">Registro</a>
-              <a class="nav-link" href="#">Pricing</a>
-              <a class="nav-link" href="#">Disabled</a>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <div className='login'>
+      <Navbar />
+
+      <div className="login">
         <h2>Login</h2>
-        <input className='input-login' type="text" placeholder='Nombre' />
-        <input className='input-login' type="email" placeholder='Correo' />
-        <input className='input-login' type="password" placeholder='Contraseña' />
-        <button className='btn btn-primary'>Registrar</button>
+          
+        <input className="input-login" type="email" placeholder="Correo" />
+        <input className="input-login" type="password" placeholder="Contraseña" />
+        
+        <div className="check-boxes">
+        <input type="checkbox"/> 
+        <h6>Remember me</h6>
+        </div>
+        <a href="">Forgot password?</a>
+        <a href="/Register">No tienes una cuenta?</a>
+        
+        <div className="log-btn">
+        <button className="btn btn-primary">Iniciar sesion</button>
+        </div>
+
       </div>
-
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
