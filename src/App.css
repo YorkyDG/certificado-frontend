@@ -1,10 +1,18 @@
 .login {
     display: flex;
     flex-direction: column;
-    width: 20%;
     text-align: center;
+    align-items: center;
     margin: 0 auto;
 }
-.input-login{
 
+.input-login {
+    border-radius: 10px;
+    padding: 5px;
+    margin: 3px;
+    width: 20%;
+}
+
+.check-boxes{
+    
 }
