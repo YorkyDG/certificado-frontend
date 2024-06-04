@@ -5,14 +5,16 @@ import { useLogin } from "./hooks/useLogin";
 
 export const Register = () => {
   const {
+    uName,
+    setUName,
     name,
     setName,
     cedula,
     setCedula,
-    tel,
-    setTel,
     password,
     setPassword,
+    tel,
+    setTel,
     department,
     setDepartment,
     email,
@@ -24,6 +26,15 @@ export const Register = () => {
       <Navbar />
       <div className="login">
         <h2>Register</h2>
+        <input
+          name="username"
+          className="input-login"
+          type="text"
+          placeholder="Nombre De Usuario"
+          value={uName}
+          onChange={(e) => setUName(e.target.value)}
+        />
+
         <input
           name="fullName"
           className="input-login"
